@@ -1,0 +1,24 @@
+Difference between encryption and hashing
+both secure the password
+
+Encryption :if u can encode that u an easily decode
+so encryption is not a good way
+it is two way communication 
+
+Hashing :this is one way communication 
+Best Algorithm: 
+Bcrypt takes 159 days to solve it
+
+Syntax of Bcrypt
+const bcrypt=require('bcryptjs')
+const securePassword=async (password)=>{
+const pHash =await bcrypt.hash(password,10)
+console.log(pHash)
+
+const pMatch =await bcrypt.compare(password,pHash)
+console.log(pMatch)
+//$2a$10$Arna0lB/xm.EfNDTLqmup.kIo2yqehEF6VGXaAPFLpRbmqy32ef4W
+}
+
+
+securePassword("thapa@123")
